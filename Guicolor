@@ -1442,7 +1442,7 @@ function ImGui:ApplyWindowSelectEffect(Window: GuiObject, TitleBar)
 			BackgroundColor3 = TitleBar.BackgroundColor3
 		},
 		Deselected = {
-			BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			BackgroundColor3 = Color3.fromRGB(211, 211, 211) -- Changed from black to light gray
 		}
 	}
 
@@ -1738,8 +1738,8 @@ function ImGui:CreateWindow(WindowConfig)
 	--// Load Style Configs
 	WindowConfig:SetTitle(WindowConfig.Title or "Depso UI")
 
-	--// Set default window color to light purple
-	WindowConfig:SetWindowColor(Color3.fromRGB(200, 160, 255))
+	--// Set default window color to dark teal
+	WindowConfig:SetWindowColor(Color3.fromRGB(0, 128, 128))
 
 	if not WindowConfig.Open then
 		WindowConfig:SetOpen(WindowConfig.Open or true, true)
